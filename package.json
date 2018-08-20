@@ -22,9 +22,7 @@
     "release": "npm run release:git && npm run release:npm",
     "postrelease": "npm run build:clean && npm run gh-pages",
     "codecov": "cat coverage/lcov.info | codecov",
-    "prettier": "prettier --write",
-    "commitmsg": "commitlint -e",
-    "precommit": "lint-staged"
+    "prettier": "prettier --write"
   },
   "ngPackage": {
     "lib": {
@@ -71,7 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ashok4kites/angular-calendar"
+    "url": "git+https://github.com/ashok4kites/scheduler-calendar"
   },
   "keywords": [
     "angular",
@@ -85,9 +83,9 @@
   "author": "Ashok Kumar M",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ashok4kites/angular-calendarissues"
+    "url": "https://github.com/ashok4kites/scheduler-calendar#issues"
   },
-  "homepage": "https://github.com/ashok4kites/angular-calendar#readme",
+  "homepage": "https://github.com/ashok4kites/scheduler-calendar#readme",
   "devDependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/cdk": "^5.0.4",
