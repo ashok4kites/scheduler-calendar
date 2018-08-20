@@ -5,8 +5,9 @@ import { DragAndDropModule } from 'angular-draggable-droppable';
 import { CalendarWeekViewComponent } from './calendar-week-view.component';
 import { CalendarWeekViewHeaderComponent } from './calendar-week-view-header.component';
 import { CalendarWeekViewEventComponent } from './calendar-week-view-event.component';
+import { PapyrusCalendarWeekViewComponent } from './calendar-week-view-custom.component';
 import { CalendarCommonModule } from '../common/calendar-common.module';
-
+import { CalendarDayModule } from '../day/calendar-day.module';
 export {
   CalendarWeekViewComponent,
   CalendarWeekViewBeforeRenderEvent
@@ -22,19 +23,23 @@ export {
     CommonModule,
     ResizableModule,
     DragAndDropModule,
-    CalendarCommonModule
+    CalendarCommonModule,
+    CalendarDayModule
   ],
   declarations: [
     CalendarWeekViewComponent,
     CalendarWeekViewHeaderComponent,
-    CalendarWeekViewEventComponent
+    CalendarWeekViewEventComponent,
+    PapyrusCalendarWeekViewComponent
   ],
   exports: [
     ResizableModule,
     DragAndDropModule,
+    CalendarDayModule,
     CalendarWeekViewComponent,
     CalendarWeekViewHeaderComponent,
-    CalendarWeekViewEventComponent
+    CalendarWeekViewEventComponent,
+    PapyrusCalendarWeekViewComponent
   ]
 })
 export class CalendarWeekModule {}

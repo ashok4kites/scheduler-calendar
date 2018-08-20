@@ -17,6 +17,9 @@ import { CalendarEvent, WeekDay } from 'calendar-utils';
       let-dayHeaderClicked="dayHeaderClicked"
       let-eventDropped="eventDropped">
       <div class="cal-day-headers">
+        <div class="cal-time-wrapper">
+          Day/Time
+        </div>
         <div
           class="cal-header"
           *ngFor="let day of days"
@@ -43,11 +46,14 @@ import { CalendarEvent, WeekDay } from 'calendar-utils';
   `
 })
 export class CalendarWeekViewHeaderComponent {
-  @Input() days: WeekDay[];
+  @Input()
+  days: WeekDay[];
 
-  @Input() locale: string;
+  @Input()
+  locale: string;
 
-  @Input() customTemplate: TemplateRef<any>;
+  @Input()
+  customTemplate: TemplateRef<any>;
 
   @Output()
   dayHeaderClicked: EventEmitter<{ day: WeekDay }> = new EventEmitter<{
